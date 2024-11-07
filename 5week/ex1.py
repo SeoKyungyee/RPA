@@ -23,24 +23,23 @@ addtext(hat['hatchery'], hat['chick'])
 
 plt.show()
 
-print("######## 파이차트를 그리기 위해 비율 계산")
+print("######### 파이파트를 그리기 위해 비율 계산")
 
 import seaborn as sns
 pct = hat['chick']/hat['chick'].sum()
-col7 = sns.color_palette('Pastel2', 7)
+col7 = sns.color_palette('pastel2', 7)
 
 # 파이차트 그리기
 plt.figure(figsize=(10, 10))
-plt.pie(pct, labels = hat['hatchery'], autopct='%.1f%%', colors=col7, counterclock= False)
+plt.pie(pct, labels = hat['hatchery'], autopct='%.1f%%', colors=col7, counterclock = False)
 plt.show()
 
-print("######## 라인 차트 그리기")
+print("######### 라인 차트 그리기")
 plt.figure(figsize=(10, 7))
 plt.plot(hat.hatchery, hat.chick, marker='*', color='y', linestyle='--', linewidth=4)
 plt.title('부화장별 병아리 부화현황')
 plt.xlabel('부화장')
 plt.ylabel('부화마릿수')
 plt.grid(True)
-plt.legend(['부화마릿수'], fontsize=10, loc='best')
+plt.legend(['부화마릿수'], fontsize=10, loc= 'best')
 plt.show()
-
